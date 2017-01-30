@@ -1,0 +1,22 @@
+.component-case-box {
+  h4 {
+    background: #a1d1d4;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 20px 0;
+  }
+}
+
+.greeting-message {
+  font-size: 20px;
+  font-weight: bold;
+  &.flash {
+    animation-duration: 1s;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+  }
+  p {
+    font-weight: normal;
+    font-weight: 18px;
+  }
+}
