@@ -20,3 +20,30 @@
     font-weight: 18px;
   }
 }
+
+.secret-message {
+  transition: all 0.5s;
+  background: $main-color;
+  color: #fff;
+  border: 1px solid $main-color;
+
+  &.authorized {
+    color: $main-color;
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+  &.wrong-password {
+    border-color: $action-color;
+    background: $action-color;
+  }
+
+  > strong {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    padding: 10px;
+  }
+  > p {
+    padding: 10px;
+    margin-top: 0;
+  }
+}
