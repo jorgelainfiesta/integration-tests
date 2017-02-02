@@ -12,6 +12,9 @@
   padding: 1px 20px 0 15px;
   border-radius: 50px;
   cursor: pointer;
+  &.action-button {
+    background: $action-color;
+  }
 }
 
 .input-text {

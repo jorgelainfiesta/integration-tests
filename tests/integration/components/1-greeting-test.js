@@ -14,3 +14,14 @@ test('Basic test', function(assert) {
 
   assert.ok(this.$('> div').hasClass('greeting-message'), 'Class is applied');
 });
+
+test('Two parameters', function(assert) {
+  this.set('name', 'Joseph');
+  this.set('salutation', 'Welcome');
+  this.render(hbs`{{1-greeting name=name salutation=salutation}}`);
+
+  let componentText = this.$().text().trim();
+  assert.equal(componentText, 'Welcome Joseph!', 'Name is rendered');
+
+  assert.ok(this.$('> div').hasClass('greeting-message'), 'Class is applied');
+});

@@ -1,0 +1,26 @@
+{{#if auth.authenticated}}
+  <div class="login-form">
+    {{1-greeting name=auth.username salutation=salutation}}
+    <button type="button" name="button" class="button" {{action 'logout'}}>Log out</button>
+  </div>
+{{else}}
+  <form
+    class="login-form {{if wrongPassword 'wrong-password'}} test-login-form-form"
+    {{action 'submitLogin' username password on="submit"}}
+  >
+    {{one-way-input
+        username
+        class="input-text test-login-form-username"
+        update=(action 'updateInput' 'username')
+        placeholder="Username"
+    }}
+    {{one-way-input
+        password
+        class="input-text test-login-form-password"
+        update=(action 'updateInput' 'password')
+        type="password"
+        placeholder="Password"
+      }}
+    <button type="submit" name="button" class="button action-button test-login-form-submit">Login</button>
+  </form>
+{{/if}}

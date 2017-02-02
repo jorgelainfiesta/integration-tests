@@ -47,3 +47,20 @@
     margin-top: 0;
   }
 }
+
+.login-form {
+  text-align: center;
+  background: lighten($alt-color, 30);
+  border-radius: 5px;
+  padding: unit-space(1);
+  .input-text {
+    margin: unit-space(1) 0;
+    display: block;
+    width: 100%;
+  }
+  &.wrong-password {
+    animation-duration: 1s;
+    animation-name: shake;
+    animation-iteration-count: 1;
+  }
+}
